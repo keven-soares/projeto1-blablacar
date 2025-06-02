@@ -227,8 +227,7 @@ while op != 0:
                     break
 
                 else:
-                    print('Email ou senha inválidos!')
-
+                    print('Email ou senha inválidos')
 
 
                     
