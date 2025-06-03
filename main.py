@@ -197,20 +197,6 @@ while op != 0:
 
                     print('-' * 50)
 
-                elif op == 9:
-                    print('\n--------- avaliações ----------')
-                    print('avalie o motorista da sua carona')
-                    email_motorista = input('digite o email do motorista que você deseja avaliar: ')
-                    if email_motorista in caronas and email_login in caronas[email_motorista][6]:
-                        nota = int(input('Nota (1-5): '))
-                        comentario = input('Comentário: ')
-                        print('Avaliação registrada!')
-                        print('Avaliação registrada!')
-                    else:
-                        print('Você não participou de caronas desse motorista')
-
-                    print('-' * 50)
-
                 elif op == 10:
                     print('\n-----------logout-------------')
                     msg_confirmacao = input('tem certeza que gostaria de sair? (s/n): ')

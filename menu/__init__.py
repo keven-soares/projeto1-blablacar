@@ -54,8 +54,6 @@ def menu_usuario_logado(email_login):
             caronas.mostrar_detalhes_carona()
         elif op == '8':
             caronas.mostrar_caronas_cadastradas(email_login)
-        elif op == '9':
-            caronas.avaliar_motorista(email_login)
         elif op == '10':
             usuario.sair_programa()
 

@@ -1,4 +1,4 @@
-usuarios = {'kevensoares@gmail.com': ['joelderson keven soares da silva','keven123',['3', 'motorista legal']],
+usuarios = {'kevensoares@gmail.com': ['joelderson keven soares da silva','keven123',],
             'jubiscleudo@gmail.com': ['jubiscleudo jeberson santos', 'juju123',[]]}
 caronas = {'kevensoares@gmail.com': ['conceição', 'cajazeiras', '17/05/2025', '22 horas', 4, '25', ['xuxubeleza@.com', '17/05/2025',]],
            'jubiscleudo@gmail.com': ['cajazeiras', 'pombal', '22/05/2025', '13 horas', 10, '20', []]}
@@ -104,16 +104,20 @@ def cancelar_reserva(email_usuario):
 
 
 def remover_carona(email_motorista):
-    print('\n-------remover carona--------')
-    if email_motorista in caronas:
-        origem, destino, data, hora, vagas, valor, passageiros = caronas[email_motorista]
-        print(f'Carona encontrada: {origem} para {destino} em {data}')
-        remover_carona = input('Tem certeza que deseja remover sua carona? (s/n): ')
-        if remover_carona.lower() == 's':
-            del caronas[email_motorista]
-            print('Sua carona foi removida com sucesso!!!')
-    else:
+    print('\n------- REMOVER CARONA -------')
+
+    if email_motorista not in caronas:
         print('Você não tem caronas cadastradas!')
+        utilidade.mostrar_linha()
+        return
+    origem, destino, data, hora, vagas, valor, passageiros = caronas[email_motorista]
+    print(f'Carona encontrada: de {origem} para {destino} em {data}')
+
+    confirmacao = input('Tem certeza que deseja remover sua carona? (s/n): ')
+    if confirmacao.lower() == 's':
+        del caronas[email_motorista]
+        print('Sua carona foi removida com sucesso!!!')
+
     utilidade.mostrar_linha()
 
 
@@ -152,18 +156,4 @@ def mostrar_caronas_cadastradas(email_usuario):
 
     if not encontrou_caronas:
         print('\nVocê não está cadastrado em nenhuma carona no momento.')
-    utilidade.mostrar_linha()
-
-
-def avaliar_motorista(email_passageiro):
-    print('\n--------- avaliações ----------')
-    print('avalie o motorista da sua carona')
-    email_motorista = input('digite o email do motorista que você deseja avaliar: ')
-
-    if email_motorista in caronas and email_passageiro in caronas[email_motorista][6]:
-        nota = int(input('Nota (1-5): '))
-        comentario = input('Comentário: ')
-        print('Avaliação registrada!')
-    else:
-        print('Você não participou de caronas desse motorista')
     utilidade.mostrar_linha()

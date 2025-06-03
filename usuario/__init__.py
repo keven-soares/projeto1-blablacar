@@ -6,8 +6,8 @@ def cadastrar_usuario():
     print('----------- CADASTRO ------------')
     nome_completo = input('digite seu nome completo: ')
     email = input('digite seu melhor email: ')
-    while not utilidade.verificar_email(email):
-        email = input('digite um email válido: ')
+    while not ('@' in email and '.' in email.split('@')[1]):
+        email = input('digite um email válido (deve conter @ e .com): ')
     senha = input('digite sua senha: ')
     usuarios[email] = [nome_completo, senha, []]
     print('usuário cadastrado com sucesso!')
