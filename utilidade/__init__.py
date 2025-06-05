@@ -34,3 +34,4 @@ def verificar_data():
                 return data_carona
         else:
             print("Formato inválido. Certifique-se de usar o formato DD/MM/AAAA.")
+

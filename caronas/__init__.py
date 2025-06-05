@@ -1,7 +1,9 @@
 usuarios = {'kevensoares@gmail.com': ['joelderson keven soares da silva','keven123',],
-            'jubiscleudo@gmail.com': ['jubiscleudo jeberson santos', 'juju123',[]]}
-caronas = {'kevensoares@gmail.com': ['conceição', 'cajazeiras', '17/05/2025', '22 horas', 4, '25', ['xuxubeleza@.com', '17/05/2025',]],
+            'jubiscleudo@gmail.com': ['jubiscleudo jeberson santos', 'juju123']}
+caronas = {'kevensoares@gmail.com': ['conceição', 'cajazeiras', '17/05/2025', '22 horas', 4, '25', ['xuxubeleza@.com', '17/05/2025',
+['5', 'motorista responsável']]],
            'jubiscleudo@gmail.com': ['cajazeiras', 'pombal', '22/05/2025', '13 horas', 10, '20', []]}
+
 
 import utilidade
 
@@ -157,3 +159,4 @@ def mostrar_caronas_cadastradas(email_usuario):
     if not encontrou_caronas:
         print('\nVocê não está cadastrado em nenhuma carona no momento.')
     utilidade.mostrar_linha()
+

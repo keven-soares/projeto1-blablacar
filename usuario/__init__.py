@@ -1,5 +1,5 @@
 usuarios = {'kevensoares@gmail.com': ['joelderson keven soares da silva','keven123',['3', 'motorista legal']],
-            'jubiscleudo@gmail.com': ['jubiscleudo jeberson santos', 'juju123',[]]}
+            'jubiscleudo@gmail.com': ['jubiscleudo jeberson santos', 'juju123']}
 
 import utilidade
 def cadastrar_usuario():
